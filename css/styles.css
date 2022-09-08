@@ -886,13 +886,18 @@ ul.projects.list {
   transition: cursor 250ms var(--timing-function);
 }
 
+.button-modal-close:hover {
+  cursor: pointer;
+}
+
 .close-svg {
   width: 18px;
   height: 18px;
+  transition: fill 250ms var(--timing-function);
 }
 
-.button-modal-close:hover {
-  cursor: pointer;
+.close-svg:hover {
+  fill: var(--accent-color)
 }
 
 .form-title {
@@ -926,28 +931,31 @@ ul.projects.list {
 
 .form-icon.first {
   position: absolute;
-  top: 104px;
-  left: 52px; 
   width: 18px;
   height: 18px;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-60%);
   transition: fill 250ms var(--timing-function);
 }
 
 .form-icon.second {
   position: absolute;
-  top: 172px;
-  left: 52px;
   width: 18px;
   height: 18px;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-60%);
   transition: fill 250ms var(--timing-function);
 }
 
 .form-icon.third {
   position: absolute;
-  top: 240px;
-  left: 52px;
   width: 18px;
   height: 18px;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-60%);
   transition: fill 250ms var(--timing-function);
 }
 
@@ -959,6 +967,7 @@ ul.projects.list {
 .form-input {
   margin: 0;
   padding: 0;
+  padding-left: 42px;
   width: 448px;
   height: 40px;
   border: 1px solid var(--form-field-input);
@@ -973,7 +982,15 @@ ul.projects.list {
   cursor: pointer;
 }
 
-.form-field .input::placeholder {
+.case {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+.form-field #feedback.form-textarea::placeholder {
   font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
